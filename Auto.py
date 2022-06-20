@@ -6,12 +6,9 @@ COMMIT_MESSAGE = 'comment from python script'
 def git_push():
     try:
         repo = Repo(PATH_OF_GIT_REPO)
-        print("ssss")
         repo.git.add(update=True)
         repo.index.commit(COMMIT_MESSAGE)
-        print("ssss")
         origin = repo.remote(name='origin')
-        print("ssss")
         origin.push()
     except:
         print('Some error occured while pushing the code')    
